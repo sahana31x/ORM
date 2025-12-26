@@ -1,4 +1,4 @@
-# Ex01 Django ORM Web Application
+# Ex-01 Django ORM Web Application
 ## Date: 25/11/2025
 
 ## AIM
@@ -23,6 +23,18 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
+```
+from django.db import models
+from django.contrib import admin
+# Create your models here.
+class Car(models.Model):
+    regno=models.CharField(max_length=20,help_text="Register Number")
+    name=models.CharField(max_length=100)
+    price=models.IntegerField()
+    year=models.IntegerField()
+class CarAdmin(admin.ModelAdmin):
+    list_display=('regno','name','price','year')
+```
 
 
 
